@@ -72,7 +72,7 @@ var TimerApp = (function() {
   
   setInterval(() => {
     if (new Date() > nextRing) ring();
-  }, 50)
+  }, 50);
 
   $stopSound.addEventListener("click", stopSoundClick);
   $playSound.addEventListener("click", playSoundClick);
