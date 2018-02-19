@@ -1,0 +1,38 @@
+.timer-app {
+  font-family: Arial, sans-serif;
+  font-size: 200%;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.button {
+  border: 0;
+  font-size: 200%;
+  width: 100%;
+  background: #EEE;
+  box-shadow: none;
+  transition: box-shadow 0.5s, background 0.5s;
+}
+
+.button:hover {
+  box-shadow: 5px 5px 10px #EEE;
+}
+
+.button:active {
+  background: #AAA;
+  box-shadow: 5px 5px 20px #AAA;
+}
+
+.button:focus {
+  outline: none;
+}
