@@ -18,7 +18,10 @@
 .button {
   border: 0;
   font-size: 200%;
+  display: block;
   width: 100%;
+  display: block;
+  margin: 10px 0;
   background: #EEE;
   box-shadow: none;
   transition: box-shadow 0.5s, background 0.5s;
@@ -35,4 +38,9 @@
 
 .button:focus {
   outline: none;
+}
+
+.debug-info {
+  color: #AAA;
+  font-size: 25%;
 }
