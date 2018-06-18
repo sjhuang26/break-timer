@@ -12,6 +12,7 @@ var TimerApp = (function() {
   
   var $stopSound = $("timer__stop-sound");
   var $playSound = $("timer__play-sound");
+  var $changeInterval = $("timer__change-interval");
   var $debugInfo = $("timer__debug-info");
 
   var updateNextRing = function() {
@@ -20,7 +21,7 @@ var TimerApp = (function() {
   }
   
   var updateDebugInfo = function() {
-    $debugInfo.textContent = "state=" + state + ";nextRing=" + new Date(nextRing) + ";";
+    $debugInfo.textContent = "state=" + state + ";nextRing=" + new Date(nextRing) + ";interval=" + INTERVAL + ";intervalOffset=" + INTERVAL_OFFSET;
   }
 
   var ring = function() {
@@ -46,6 +47,12 @@ var TimerApp = (function() {
 
   var playSoundClick = function() {
     ring();
+  };
+
+  var changeIntervalClick = function() {
+    INTERVAL = 1000 * 60 * prompt("Set interval (minutes)");
+    INTERVAL_OFFSET = 1000 * 60 * prompt("Set interval offset (minutes)");
+    updateNextRing();
   };
 
   var updateState = function() {
@@ -76,6 +83,7 @@ var TimerApp = (function() {
 
   $stopSound.addEventListener("click", stopSoundClick);
   $playSound.addEventListener("click", playSoundClick);
+  $changeInterval.addEventListener("click", changeIntervalClick);
 
   return {
     ring: ring

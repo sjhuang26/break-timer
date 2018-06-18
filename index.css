@@ -1,6 +1,11 @@
 .timer-app {
   font-family: Arial, sans-serif;
   font-size: 200%;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .title {
@@ -15,25 +20,37 @@
   text-align: center;
 }
 
+.button-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
 .button {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+  flex-grow: 1;
+  margin: 10px;
   border: 0;
-  font-size: 200%;
+  font-size: 120%;
   display: block;
-  width: 100%;
-  display: block;
-  margin: 10px 0;
-  background: #EEE;
-  box-shadow: none;
-  transition: box-shadow 0.5s, background 0.5s;
+  background: #1565c0;
+  color: white;
+  border-radius: 2px;
+  /* https://codepen.io/sdthornton/pen/wBZdXq */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .button:hover {
-  box-shadow: 5px 5px 10px #EEE;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .button:active {
-  background: #AAA;
-  box-shadow: 5px 5px 20px #AAA;
+  background: #003b8e;
 }
 
 .button:focus {
